@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import os
+import py_compile
+def compile_python_file():
+    pyfile = os.getenv('PYFILE')
+    py_compile.compile(pyfile, cfile=f"{pyfile}c")
+if __name__ == "__main__":
+    compile_python_file()
